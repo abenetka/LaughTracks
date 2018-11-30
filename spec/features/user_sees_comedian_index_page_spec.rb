@@ -1,9 +1,14 @@
 RSpec.describe 'Comedian Index Page' do
   it 'shows data for comedians' do
     comedian = Comedian.create(name: "Andrew Bueno", age: 32, city: "Denver")
+    special_1 = comedian.specials.create(name: "Hell Yeah", length: 65)
+    special_2 = comedian.specials.create(name: "Funny Things", length: 75)
+
 
     visit "/comedians"
     within "#comic-#{comedian.id}" do
+      save_and_open_page
+      expect(page).to have_content("Total Specials: 2")
       expect(page).to have_content(comedian.name)
       expect(page).to have_content("Age: #{comedian.age}")
       expect(page).to have_content("City: #{comedian.city}")
