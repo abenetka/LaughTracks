@@ -8,11 +8,12 @@
   </ul>
 </div>
 
+
 <% @comedians.each do |comic| %>
 <div id="comic-<%=comic.id%>">
   <h2><%= comic.name %></h2>
-  <p>Age: <%= comic.age%>,
-  City: <%= comic.city%></p>
+    <p>Age: <%= comic.age%>,
+      City: <%= comic.city%></p>
   <h3>Specials</h3>
     <ul id="comic-<%=comic.id%>-specials">
       <% comic.specials.each do |special| %>
@@ -20,6 +21,6 @@
         Length: <%= special.length %> min
         <img src=<%= special.image_url %>></li>
         <% end %>
-      </ul>
-  </div>
+    </ul>
+</div>
 <% end %>
