@@ -28,7 +28,7 @@ RSpec.describe 'Comedian Index by Age' do
     andrew.specials.create(name: "You are not Funny", length: 60)
 
     visit "/comedians?age=34"
-    
+
     within "#statistics" do
 
       expect(page).to have_content("Total TV Specials: 2")
