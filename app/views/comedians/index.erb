@@ -1,28 +1,42 @@
-<h1> Comedians </h1>
-<div id="statistics">
+<body>
+  <header>
+    <h1> C O M E D I A N S </h1>
+  </header>
+<section class= "stats">
   <h2> Statistics </h2>
-  <ul>
-    <li>Average TV Special Run Time: <%= @specials.average_run_time.to_i %></li>
-    <li>Total TV Specials: <%= @specials.count %></li>
-    <li>Average Age of Comedians: <%= @comedians.average_age.to_i %></li>
-    <li>Cities: <%= @comedians.list_unique_cities.join(", ") %></li>
-  </ul>
-</div>
-
-
-<% @comedians.each do |comic| %>
-<div id="comic-<%=comic.id%>">
-  <h2><%= comic.name %></h2>
-    <p>Age: <%= comic.age%>,
-      City: <%= comic.city%>,
-      Total Specials: <%=comic.specials.count%></p>
-  <h3>Specials</h3>
-    <ul id="comic-<%=comic.id%>-specials">
-      <% comic.specials.each do |special| %>
-      <li>Name: <%= special.name %>,
-        Length: <%= special.length %> min
-        <img src=<%= special.image_url %>></li>
-        <% end %>
+  <div class= "statistics" id="statistics-box">
+    <ul>
+      <li>Average TV Special Run Time<br><br> <%= @specials.average_run_time.to_i %></li>
+      <li>Total TV Specials<br><br> <%= @specials.count %></li>
+      <li>Average Age of Comedian:<br><br><%= @comedians.average_age.to_i %></li>
+      <li>Cities<br><br> <%= @comedians.list_unique_cities.join(", ") %></li>
     </ul>
-</div>
+  </div>
+</section>
+
+
+<div class="comedian-grid">
+<% @comedians.each do |comic| %>
+  <div class="comics" id="comic-<%=comic.id%>">
+    <h2><%= comic.name %></h2>
+    <div id="comic-info">
+      <h4>Age: <%= comic.age%></h4>
+      <h4>City: <%= comic.city%></h4>
+      <h4>Total Specials: <%=comic.specials.count%></h4>
+      </div>
+      <h3> - Specials - </h3>
+
+      <div class="specials-grid" id="comic-<%=comic.id%>-specials">
+
+        <% comic.specials.each do |special| %>
+        <div id="special-info">
+          <h5> <%= special.name %></h5>
+          <h5>Length: <%= special.length %> min</h5>
+        </div>
+        <img src=<%= special.image_url %> >
+        <% end %>
+      </div>
+  </div>
+
 <% end %>
+</div>

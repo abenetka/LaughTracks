@@ -1,6 +1,88 @@
-body{font-family: arial;
+body{
+  font-family: "Gill Sans", sans-serif;
+  background-image: url(https://scontent.fapa1-2.fna.fbcdn.net/v/t1.0-9/46458561_950173411839810_2978301232680009728_o.jpg?_nc_cat=100&_nc_ht=scontent.fapa1-2.fna&oh=bc35772c62ac3488fa25fc958948c33b&oe=5C6C95AE);
+
 }
 
+header {
+  background-color: #133036;
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  margin: 20px;
+  padding: 1px;
+  text-align: center;
+  font-size: 50px;
+  color: 	#fdfaed;
+}
+.statistics{
+  background-color: #401133;
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+
+}
+.stats{
+  background-color: #401133;
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  margin: 10px;
+  color: 	#fdfaed;
+  text-align: center;
+  padding: 10px;
+  font-size: 40px;
+  text-transform: uppercase;
+
+}
+.statistics ul{
+  display: inline-flex;
+  justify-content: space-between;
+  list-style: none;
+  text-align: center;
+  font-size: 25px;
+}
+
+.comedian-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  padding: 10px;
+  grid-gap: 50px;
+}
+
+.comics{
+  background: black;
+  color: 	#fdfaed;
+  border-radius: 25px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #9DE7DA;
+  text-align: center;
+}
+
+.comedian-grid h2{
+  text-transform: uppercase;
+  text-align: center;
+  padding: 30px;
+  font-size: 40px;
+}
+
+.specials-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+}
+
+#special-info{
+  text-align: left;
+  padding-left: 30px;
+}
 img{
-  width: 50px;
+  width: 75px;
+  align-self: center;
+  padding: 25px;
 }
