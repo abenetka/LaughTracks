@@ -13,17 +13,17 @@ steve = Comedian.create(name: "Steve Martin", age: 73, city: "Los Angeles")
 demetri = Comedian.create(name: "Demetri Martin", age: 45 , city: "Santa Monica")
 trevor = Comedian.create(name: "Trevor Noah", age: 34 , city: "New York City")
 maria = Comedian.create(name: "Maria Bamford", age: 48, city: "Los Angeles")
-jerry = Comedian.create(name: "Jerry Seinfeld", age: 64, city: "New York")
+jerry = Comedian.create(name: "Jerry Seinfeld", age: 64, city: "New York City")
 michelle = Comedian.create(name: "Michelle Wolf", age: 33, city: "New York City")
 ali = Comedian.create(name: "Ali Wong", age: 36, city: "Los Angeles")
 
-adam.specials.create(name: "Comedy Central Stand-up Presents: Adam Cayton-Holland", length: 30, image_url: "https://i1.wp.com/www.eponymousreview.com/wp-content/uploads/2018/03/Adam-Cayton-Holland-A.jpg?resize=1170%2C657&ssl=1")
+adam.specials.create(name: "Comedy Central Stand-up Presents: Adam Cayton-Holland", length: 30, image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXwouKiTYejqTVpuSyjTLTI-6ChXGlTuV8gXK-J1BwdmVvOnCesA")
 
-fred.specials.create(name: "Standup For Drummers", length: 62, image_url: "https://ktsw899.files.wordpress.com/2018/04/image.png?w=665&h=374&crop=1")
+fred.specials.create(name: "Standup For Drummers", length: 62, image_url: "https://m.media-amazon.com/images/M/MV5BZjgwZjQ5OTgtMWY0MC00YTQ5LWE2MzEtMWEyYTc5ODhlMTQyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY268_CR4,0,182,268_AL_.jpg")
 
 john.specials.create(name: "The Comeback Kid ", length: 62, image_url: "https://images-na.ssl-images-amazon.com/images/I/61z5otRH8yL._SS500.jpg")
 john.specials.create(name: "New in Town ", length: 60, image_url: "https://images2.9c9media.com/image_asset/2018_8_16_8c7fe4ed-ca7c-4392-b256-1ba089d71977_png_2000x3000.jpg?height=500&maintain_aspect=1&size=500")
-john.specials.create(name: "Kid Gorgeous at Radio City ", length: 65, image_url: "http://www.burntx.com/wp-content/uploads/2017/10/mulaney_kid_gorgeous-e1507924745177.jpg")
+john.specials.create(name: "Kid Gorgeous at Radio City ", length: 65, image_url: "https://i2.wp.com/theweeklyspoon.com/wp-content/uploads/2018/05/JohnMulaney_KidGorgeous_11-01-17.jpg?fit=404%2C500")
 
 ellen.specials.create(name: "The Beginning", length: 65, image_url: "https://m.media-amazon.com/images/M/MV5BODQxNzQzMDc4Nl5BMl5BanBnXkFtZTgwMTgwNjgwMzE@._V1_UY268_CR9,0,182,268_AL_.jpg")
 ellen.specials.create(name: "Here and Now", length: 60, image_url: "https://images-na.ssl-images-amazon.com/images/I/71ubDkbhtSL._SX342_.jpg")
@@ -47,7 +47,7 @@ trevor.specials.create(name: "Lost in Translation", length: 62, image_url: "http
 trevor.specials.create(name: "Son of Patricia", length: 63, image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkrHAknv84xU4mW75BPBL1Kvg7fWHWhrwsr2zhROFAxCHYvFr4")
 
 maria.specials.create(name: "Old Baby", length: 64, image_url: "https://www.dvdplanetstore.pk/wp-content/uploads/2018/01/i4kcbcvT4Xdq4bmAj4gRy1doXBK.jpg")
-maria.specials.create(name: "The Special Special Special!", length: 49, image_url: "https://static01.nyt.com/images/2012/12/17/arts/jpcomedy/jpcomedy-jumbo.jpg")
+maria.specials.create(name: "The Special Special Special!", length: 49, image_url: "https://m.media-amazon.com/images/M/MV5BMjM0MjEyMjM0OF5BMl5BanBnXkFtZTcwMDQ3NzQxOQ@@._V1_.jpg")
 
 jerry.specials.create(name: "I'm Telling You for the Last Time", length: 75, image_url: "https://upload.wikimedia.org/wikipedia/en/thumb/6/68/Jerry_Seinfeld%2C_I%27m_Telling_You_for_the_Last_Time_video_box.jpg/220px-Jerry_Seinfeld%2C_I%27m_Telling_You_for_the_Last_Time_video_box.jpg")
 jerry.specials.create(name: "Stand-Up Confidential", length: 55, image_url: "https://m.media-amazon.com/images/M/MV5BYjZlNTgxMzYtZjc1ZS00OTQzLThiYWYtMTEzYjNmNDM1NmFkXkEyXkFqcGdeQXVyMzU0NzkwMDg@._V1_UX182_CR0,0,182,268_AL_.jpg")
