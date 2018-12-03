@@ -1,15 +1,18 @@
 <body>
-  <header>
+  <!-- <header>
     <h1> Add a New Comedian </h1>
-  </header>
+  </header> -->
 
-  <div class="form">
+  <div class="form-container">
+    <h2> NEW COMEDIAN </h2>
     <form class="new-comedian" action="/comedians" method=POST>
-      <input type="text" name="comedian[name]" placeholder="Name">
-      <input type="integer" name="comedian[age]" placeholder="Age">
-      <input type="text" name="comedian[city]" placeholder="City">
+      <h3>NAME:   <input type="text" name="comedian[name]" placeholder="Name"></h3><br>
+      <h3>AGE:   <input type="integer" name="comedian[age]" placeholder="Age"></h3><br>
+      <h3>CITY:   <input type="text" name="comedian[city]" placeholder="City"></h3><br>
       <input type="submit" value="Submit">
+      <br><br>
     </form>
+
   </div>
 
 </body>

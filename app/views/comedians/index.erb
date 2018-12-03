@@ -2,18 +2,17 @@
   <header>
     <h1> C O M E D I A N S </h1>
   </header>
-<section class= "stats">
-  <h2> Statistics </h2>
+<div class= "stats">
+  <h2><strong> STATISTICS </strong></h2>
   <div class= "statistics" id="statistics-box">
     <ul>
-      <li>Average TV Special Run Time<br><br> <%= @specials.average_run_time.to_i %></li>
-      <li>Total TV Specials<br><br> <%= @specials.count %></li>
-      <li>Average Age of Comedian:<br><br><%= @comedians.average_age.to_i %></li>
-      <li>Cities<br><br> <%= @comedians.list_unique_cities.join(", ") %></li>
+      <li><strong>AVERAGE TV SPECIAL RUN TIME: <br><br></strong> <%= @specials.average_run_time.to_i %></li>
+      <li><strong>TOTAL NUMBER OF TV SPECIALS: </strong><br><br> <%= @specials.count %></li>
+      <li><strong>AVERAGE COMEDIAN AGE: </strong><br><br><%= @comedians.average_age.to_i %></li>
+      <li><strong>WHERE THEY LIVE: </strong> <br><br> <%= @comedians.list_unique_cities.join(", ") %></li>
     </ul>
   </div>
-</section>
-
+</div>
 
 <div class="comedian-grid">
 <% @comedians.each do |comic| %>
@@ -23,15 +22,14 @@
       <h4>Age: <%= comic.age%></h4>
       <h4>City: <%= comic.city%></h4>
       <h4>Total Specials: <%=comic.specials.count%></h4>
-      </div>
-      <h3> - Specials - </h3>
-
+    </div>
+    <br>
+      <h3> --- SPECIALS --- </h3>
       <div class="specials-grid" id="comic-<%=comic.id%>-specials">
-
         <% comic.specials.each do |special| %>
-        <div id="special-info">
-          <h5> <%= special.name %></h5>
-          <h5>Length: <%= special.length %> min</h5>
+        <div class="special-info">
+          <h5><em> <%= special.name %></em></h5>
+          <h5>Runtime: <%= special.length %> min</h5>
         </div>
         <img src=<%= special.image_url %> >
         <% end %>
@@ -40,3 +38,4 @@
 
 <% end %>
 </div>
+</body>
