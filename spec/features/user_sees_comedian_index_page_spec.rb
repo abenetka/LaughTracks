@@ -1,8 +1,8 @@
 RSpec.describe 'Comedian Index Page' do
   it 'shows data for comedians' do
     comedian = Comedian.create(name: "Andrew Bueno", age: 32, city: "Denver")
-    special_1 = comedian.specials.create(name: "Hell Yeah", length: 65)
-    special_2 = comedian.specials.create(name: "Funny Things", length: 75)
+    comedian.specials.create(name: "Hell Yeah", length: 65)
+    comedian.specials.create(name: "Funny Things", length: 75)
 
 
     visit "/comedians"
@@ -20,7 +20,8 @@ RSpec.describe 'Comedian Index Page' do
 
     visit "/comedians"
     within "#comic-#{comedian.id}-specials" do
-      expect(page).to have_content("Name: #{special.name}, Length: #{special.length} min")
+      expect(page).to have_content("#{special.name}")
+      expect(page).to have_content("Runtime: #{special.length} min")
     end
   end
 
@@ -35,14 +36,16 @@ RSpec.describe 'Comedian Index Page' do
     andrew.specials.create(name: "You are not Funny", length: 60)
 
     visit "/comedians"
-    within "#statistics" do
+    within "#statistics-box" do
       expected = Comedian.list_unique_cities
-
-      expect(page).to have_content("Statistics")
-      expect(page).to have_content("Total TV Specials: #{Special.count}")
-      expect(page).to have_content("Average Age of Comedians: #{Comedian.average_age.to_i}")
-      expect(page).to have_content("Average TV Special Run Time: #{Special.average_run_time.to_i}")
-      expect(page).to have_content("Cities: #{expected.join(", ")}")
+      expect(page).to have_content("TOTAL NUMBER OF TV SPECIALS:")
+      expect(page).to have_content("#{Special.count}")
+      expect(page).to have_content("AVERAGE COMEDIAN AGE:")
+      expect(page).to have_content("#{Comedian.average_age.to_i}")
+      expect(page).to have_content("AVERAGE TV SPECIAL RUN TIME:")
+      expect(page).to have_content("#{Special.average_run_time.to_i}")
+      expect(page).to have_content("WHERE THEY LIVE:")
+      expect(page).to have_content("#{expected.join(", ")}")
     end
   end
 

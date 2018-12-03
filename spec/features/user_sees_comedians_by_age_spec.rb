@@ -29,12 +29,12 @@ RSpec.describe 'Comedian Index by Age' do
 
     visit "/comedians?age=34"
 
-    within "#statistics" do
-
-      expect(page).to have_content("Total TV Specials: 2")
-      expect(page).to have_content("Average Age of Comedians: 34")
-      expect(page).to have_content("Average TV Special Run Time: 62")
-      expect(page).to have_content("Cities: New York City")
+    within "#statistics-box" do
+      expect(page).to have_content("TOTAL NUMBER OF TV SPECIALS: 2")
+      expect(page).to have_content("AVERAGE COMEDIAN AGE: 34")
+      expect(page).to have_content("AVERAGE TV SPECIAL RUN TIME: 62")
+      expect(page).to have_content("WHERE THEY LIVE: New York City")
     end
   end
+  
 end

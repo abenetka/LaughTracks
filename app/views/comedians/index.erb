@@ -6,7 +6,7 @@
   <h2><strong> STATISTICS </strong></h2>
   <div class= "statistics" id="statistics-box">
     <ul>
-      <li><strong>AVERAGE TV SPECIAL RUN TIME: </strong> <br><br> <%= @specials.average_run_time.to_i %></li>
+      <li><strong>AVERAGE TV SPECIAL RUN TIME: <br><br></strong> <%= @specials.average_run_time.to_i %></li>
       <li><strong>TOTAL NUMBER OF TV SPECIALS: </strong><br><br> <%= @specials.count %></li>
       <li><strong>AVERAGE COMEDIAN AGE: </strong><br><br><%= @comedians.average_age.to_i %></li>
       <li><strong>WHERE THEY LIVE: </strong> <br><br> <%= @comedians.list_unique_cities.join(", ") %></li>
